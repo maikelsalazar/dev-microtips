@@ -4,6 +4,7 @@
 
 ## 📑 Table of Contents
 - [Prefer single quotes over double quotes](#prefer-single-quotes-over-double-quotes)
+- [Use [] instead of array_push](#use--instead-of-array_push)
 
 ---
 
@@ -29,3 +30,29 @@ The performance difference is minimal in most applications, but measurable in la
 Use single quotes unless you need:
 - Variable interpolation ("Hello $name")
 - Escape sequences like "\n" or "\t".
+
+---
+
+## Use [] instead of array_push
+
+When adding elements to an array, prefer the `[]` syntax over `array_push()`.
+It’s more concise, readable, and slightly faster since it avoids a function call.
+
+Reference: (array_push)[https://www.php.net/manual/en/function.array-push.php]
+
+```php
+$holder = [];
+
+// ✅ Faster
+$holder[] = 1;
+
+// ❌ Slower
+array_push($holder, 1);
+```
+
+### 📊 Impact
+Micro difference, but noticeable in high-frequency array insertions (e.g., large data processing loops)
+
+### 💡 Rule of thumb
+- Use [] for single element appends.
+- Reserve array_push() only when adding multiple elements at once (array_push($arr, 1, 2, 3)).
