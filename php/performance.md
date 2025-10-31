@@ -38,7 +38,7 @@ Use single quotes unless you need:
 When adding elements to an array, prefer the `[]` syntax over `array_push()`.
 It’s more concise, readable, and slightly faster since it avoids a function call.
 
-Reference: (array_push)[https://www.php.net/manual/en/function.array-push.php]
+**Reference**: [PHP array_push](https://www.php.net/manual/en/function.array-push.php)
 
 ```php
 $holder = [];
