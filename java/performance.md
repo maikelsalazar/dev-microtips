@@ -1,7 +1,7 @@
 # ⚡ Java Performance Tips
 
 ## 📑 Table of Contents
-- [Prefer `StringBuilder` or `StringBuffer` over `+` for concatenation](#prefer-stringbuilder-or-stringbuffer-over-for-concatenation)
+- [Prefer `StringBuilder` or `StringBuffer` over `+` for concatenation](#prefer-stringbuilder-or-stringbuffer-over--for-concatenation)
 
 ## Prefer `StringBuilder` or `StringBuffer` over `+` for concatenation
 
